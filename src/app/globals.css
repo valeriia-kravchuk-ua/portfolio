@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+/* === Fonts ==== */
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/fonts/NeueMachina-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/fonts/NeueMachina-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/fonts/NeueMachina-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/fonts/NeueMachina-Ultrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-UltraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  /* --- Colors ------- */
+
+  --color-background: #10070d;
+  --color-surface: #2d1b3b;
+  --color-surface-hover: #24152f;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c9c1d5;
+
+  --color-accent: #ff66c4;
+  --color-accent-blue: #4da3ff;
+  --color-accent-purple: #9d7cff;
+  --color-accent-orange: #ffb84d;
+  --color-accent-cyan: #41d9ff;
+  --color-accent-green: #14ae5c;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+
+  /* --- Typography--- */
+
+  --font-heading: "Neue Machina", sans-serif;
+  --font-body: "Telegraf", sans-serif;
+
+  /* Desktop typography */
+
+  --text-display-xl: 72px;
+  --line-display-xl: 80px;
+
+  --text-h1: 64px;
+  --line-h1: 72px;
+
+  --text-h2: 32px;
+  --line-h2: 40px;
+
+  --text-h3: 28px;
+  --line-h3: 36px;
+
+  --text-subtitle: 24px;
+  --line-subtitle: 32px;
+
+  --text-body-lg: 20px;
+  --line-body-lg: 30px;
+
+  --text-body: 16px;
+  --line-body: 24px;
+
+  --text-list: 16px;
+  --line-list: 28px;
+
+  --text-small: 14px;
+  --line-small: 20px;
+
+  --text-caption: 12px;
+  --line-caption: 16px;
+
+  /* --- Spacing --- */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 120px;
+
+  /* --- Radius --- */
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* --- Effects --- */
+
+  --shadow-card:
+          0 18px 48px rgba(0, 0, 0, 0.2);
+
+  --glow-accent:
+          0 0 18px rgba(255, 102, 196, 0.35);
+}
+
+
+/* ==== MOBILE TOKENS ==== */
+
+@media (max-width: 768px) {
+  :root {
+    --text-display-xl: 48px;
+    --line-display-xl: 56px;
+
+    --text-h1: 40px;
+    --line-h1: 48px;
+
+    --text-h2: 28px;
+    --line-h2: 36px;
+
+    --text-h3: 24px;
+    --line-h3: 32px;
+
+    --text-subtitle: 20px;
+    --line-subtitle: 28px;
+
+    --text-body-lg: 18px;
+    --line-body-lg: 26px;
+
+    --text-body: 16px;
+    --line-body: 24px;
+
+    --text-list: 16px;
+    --line-list: 24px;
+  }
+}
+
+
+/* ==== BASE ==== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   Typography
+   ========================= */
+
+.heading-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display-xl);
+  line-height: var(--line-display-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h1);
+  line-height: var(--line-h1);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--line-h2);
+  font-weight: 800;
+}
+
+.heading-3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  line-height: var(--line-h3);
+  font-weight: 700;
+}
+
+.text-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-subtitle);
+  line-height: var(--line-subtitle);
+  font-weight: 400;
+}
+
+.text-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  font-weight: 400;
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  font-weight: 400;
+}
+
+.text-list {
+  font-family: var(--font-body);
+  font-size: var(--text-list);
+  line-height: var(--line-list);
+  font-weight: 400;
+}
+
+.text-small {
+  font-family: var(--font-space-grotesk);
+  font-size: var(--text-small);
+  line-height: var(--line-small);
+  font-weight: 500;
+}
+
+.text-caption {
+  font-family: var(--font-space-grotesk);
+  font-size: var(--text-caption);
+  line-height: var(--line-caption);
+  font-weight: 500;
+}
+
+
+/* === Layout === */
+
+.container {
+  width: 100%;
+  padding-inline: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: 80px;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
