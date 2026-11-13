@@ -1,0 +1,87 @@
+.hero {
+    min-height: calc(100svh - 75px);
+    padding-top: 75px;
+}
+.content{
+    margin-bottom: 64px;
+}
+
+.pretitle {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Telegraf;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.title {
+    color: #FFF;
+    font-family: "Neue Machina";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 92px; /* 255.556% */
+    letter-spacing: -0.36px;
+    margin-bottom: 64px;
+}
+
+.role {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Telegraf;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 154.545% */
+    max-width: 248px;
+}
+
+h2.role{
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+p.role{
+
+}
+
+.actions {
+display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.btnLink {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.50);
+
+
+    color: #FFF;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.50);
+    font-family: Telegraf;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    width: 259px;
+    height: 60px;
+    padding: 16px 20px 16px 24px;
+}
+
+
+
+
+
